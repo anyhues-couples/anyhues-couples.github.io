@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="author" content="Andreas Niehues"/>
     <title>Andreas Niehues - Systemisch integrative Praxis für Paar- und Familientherapie, Coaching und psychologische Beratung, Sexualberatung und Sexualpädagogik</title>
-    <link rel="stylesheet" href="https://niehues-assets.github.io/css/main-32dc55113f.css"/>
+    <link rel="stylesheet" href="https://niehues-assets.github.io/css/main-3d46bc478d.css"/>
   </head>
   <body>
     <header class="sub-header">
@@ -62,10 +62,10 @@
 
       </div>
           <ul class="teasers teaser-count-3">
-                <li class="teaser teaser-family"><a href="http://www.paartherapeut-essen.de">
+                <li class="teaser teaser-family"><a href="http://www.familientherapeut-essen.de">
                     <div class="overlay"></div>
                     <div class="img-container"></div><span class="label">Familien</span></a></li>
-                <li class="teaser teaser-single"><a href="#">
+                <li class="teaser teaser-single"><a href="http://www.sexualtherapeut-essen.de">
                     <div class="overlay"></div>
                     <div class="img-container"></div><span class="label">Singles</span></a></li>
                 <li class="teaser teaser-corporations"><a href="#">
@@ -208,6 +208,19 @@ Die Anbindung an die umliegenden Städte ist ideal, die A40 und die A52 sind 10 
             target.find('.error-message').show()
           }
         });
+      });
+      
+      $('a[href*="#"]:not([href="#"])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html, body').animate({
+              scrollTop: target.offset().top
+            }, 1000);
+            return false;
+          }
+        }
       });
     </script>
   </body>
